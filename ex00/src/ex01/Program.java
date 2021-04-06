@@ -11,33 +11,26 @@ public class Program {
       scanner.close();
       System.exit(-1);
     }
-    if (number == 2 || number == 3) {
+    if (number == 2) {
       System.out.print(true);
       System.out.print(' ');
-      System.out.print(1);
+      System.out.println(1);
       scanner.close();
       return;
     }
-    if (number % 2 == 0 || number % 3 == 0) {
-      System.out.print(false);
-      System.out.print(' ');
-      System.out.print(1);
-      scanner.close();
-      return;
-    }
-    int i = 5;
+    int i = 2;
     for (; i * i <= number; i++) {
       if (number % i == 0) {
         System.out.print(false);
         System.out.print(' ');
-        System.out.print(i - 1);
+        System.out.println(i - 1);
         scanner.close();
         return;
       }
     }
     System.out.print(true);
     System.out.print(' ');
-    System.out.print(i - 1);
+    System.out.println(i - 1);
     scanner.close();
   }
 }
