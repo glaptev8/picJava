@@ -2,51 +2,40 @@ package ex03;
 
 import java.util.Scanner;
 
+
+//Week 1
+//5 6 7 8 9
+//Week 2
+//5 6 7 8 9
+//Week 3
+//5 6 7 8 9
+//Week 4
+//5 6 7 8 9
+//Week 5
+//5 6 7 8 9
+//Week 6
+//5 6 7 8 9
+//Week 7
+//5 6 7 8 9
+//Week 8
+//5 6 7 8 9
+//Week 9
+//5 6 7 8 9
+//Week 10
+//5 6 7 8 9
 public class Program {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    String line;
-    int i = 1;
-    long result = 0;
+    int[] q = new int[5];
+    q[0] = 2;
+    q[1] = 2;
+    q[2] = 2;
+    q[3] = 2;
+    q[4] = 2;
+    qq(q);
+    System.out.println(q[2]);
+  }
 
-    while (i < 19 && !(line = scanner.nextLine()).equals("42")) {
-      if (!line.equals("Week " + i)) {
-        System.err.println("IllegalArgument");
-        System.exit(-1);
-      }
-      int minTest = 0;
-      for (int k = 0; k < 5; k++) {
-        int num = scanner.nextInt();
-        if (minTest == 0 || num < minTest) {
-          minTest = num;
-        }
-      }
-      scanner.nextLine();
-      int dec = 0;
-      for (int j = 0; j < i - 1; j++) {
-        dec *= 10;
-        if (dec == 0) {
-          dec = 10;
-        }
-      }
-      result = minTest * dec + result;
-      if (result == 0) {
-        result += minTest;
-      }
-      i++;
-    }
-    i = 1;
-    while (result != 0) {
-      long count = result % 10;
-      System.out.print("Week ");
-      System.out.print(i);
-      System.out.print(" ");
-      for (int j = 0; j < count; j++) {
-        System.out.print("=");
-      }
-      System.out.println(">");
-      result /= 10;
-      i++;
-    }
+  public static void qq(int[] q) {
+    q[2] = 3;
   }
 }
