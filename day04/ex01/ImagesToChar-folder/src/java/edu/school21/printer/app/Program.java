@@ -11,7 +11,6 @@ public class Program {
 
   private static final String WHITE = "white";
   private static final String BLACK = "black";
-//  private static final String PATH = Program.class.getClassLoader().getResource("resources/image.bmp").getPath();
 
   public static void main(String[] args) throws IOException {
     if (args.length != 2) {
@@ -26,9 +25,8 @@ public class Program {
 
     String white = arguments.get(WHITE);
     String black = arguments.get(BLACK);
-//    String path = PATH;
 
-    char[][] map = ReaderFile.read("path");
+    char[][] map = ReaderFile.read();
     print(map, black, white);
   }
 

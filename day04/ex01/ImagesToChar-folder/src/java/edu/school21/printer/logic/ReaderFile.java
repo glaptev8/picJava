@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ReaderFile {
-  static public char[][] read(String path) throws IOException {
+  static public char[][] read() throws IOException {
     BufferedImage readerImage = ImageIO.read(ReaderFile.class.getClassLoader().getResourceAsStream("resources/it.bmp"));
     if (readerImage.getType() != BufferedImage.TYPE_BYTE_BINARY || readerImage.getColorModel().getPixelSize() != 1) {
       System.err.println("format doesn't match for print");
